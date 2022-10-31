@@ -12,106 +12,66 @@
   cursor: pointer;
 }
 
-nav {
+.App{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  color: #101828;
+  font-family: 'Inter';
 }
 
-.bar {
-  width: 20px;
-  height: 3px;
-  background-color: #000;
-  display: block;
-}
-
-.bar:nth-child(2) {
-  margin-block: 2px;
-}
-
-.menu-container{
+#share-btn{
   position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 100vh;
-  background-color: rgb(0, 0, 0,.5);
-  backdrop-filter: blur(2px);
-  transition: all 0.3s ease-in;
+  top: 44px;
+  right: 20px;
 }
 
-/* close button */
-.close-btn{
-  background-color: #c4bba7;
-  height: fit-content;
-  padding: 1rem;
-  border-radius: 50%;
-  margin: 2em 0 0 1em;
-}
-
-.close-btn i{
-  color: #5c4742;
-}
-
-.menu {
+/* profile section */
+.profile{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  background-color: #5c4742;
-  font-size: 22px;
-  font-weight: 500;
-  width: 60%;
-  height: 100vh;
-  padding-left: 1rem;
+  gap: 1.5rem;
 }
 
-.menu a{
-  text-decoration: none;
-  color: #c4bba7;
-}
+/* .profile img{
+  width: 88px;
+} */
 
-.menu a.active{
+.profile p{
+  font-style: normal;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
 }
 
-.container{
-  padding: 1rem;
+.links{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  gap: 1.5rem;
 }
 
-@media (min-width: 768px){
-  .hamburger{
-    display: none;
-  }
+.links a{
+  background: #EAECF0;
+  border: 1px solid #EAECF0;
+  color: #101828;
+  border-radius: 8px;
+  padding: 24px 32px;
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  transition: all ease-in .3s;
+}
 
-  .hidden{
-    display: unset;
-  }
-
-  .menu-container{
-    position: unset;
-    display: unset;
-    height: unset;
-    width: fit-content;
-    background-color: transparent;
-    backdrop-filter: unset;
-  }
-
-  .close-btn{
-    display: none;
-  }
-
-  .menu{
-    background-color: transparent;
-    height: unset;
-    flex-direction: row;
-  }
-
-  .menu a{
-    color: #5c4742;
-  }
-
+.links a:hover{
+  background: #eaecf041;
+  border: 1px solid #000;
 }
