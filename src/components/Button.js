@@ -13,7 +13,7 @@ export default function Button() {
   return (
     <div className="links">
       {userData && userData.map((item) => (
-        <a key={item.id} id={item.id} href={item.link} className="link">
+        <a key={item.id} id={item.id} data-aos={item.aosStyle} href={item.link} className="link">
           {item.title}
         </a>
       ))}
