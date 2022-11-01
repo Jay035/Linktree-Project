@@ -1,5 +1,6 @@
 import "./App.css";
 import AOS from "aos";
+import 'aos/dist/aos.css';
 import Button from "./components/Button";
 import ProfilePic from "./profile-pics.png";
 import shareBtn from "./assets/_Avatar-share-button.png";
@@ -10,23 +11,20 @@ import Footer from "./components/Footer";
 
 function App() {
   // initialise AOS library
-  AOS.init({
-    offset: 120, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 400, // values from 0 to 3000, with step 50ms
-  });
+  AOS.init();
 
   return (
     <div className="App">
       <img
-        data-aos="fade-up"
+        data-aos="fade-in" 
+        // data-aos-duration="3000"
         className="cursor-pointer share-btn"
         id="share-btn-mobile"
         src={shareBtn}
         alt="share button"
       />
       <img
-        data-aos="fade-up"
+        data-aos="fade-in"
         className="cursor-pointer share-btn"
         id="share-btn-desktop"
         src={shareBtnDesktop}
