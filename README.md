@@ -1,5 +1,3 @@
-# TO-DO
-Implement nested routes, 404 page, error boundary, accessibility
 
 # Getting Started with Create React App
 
