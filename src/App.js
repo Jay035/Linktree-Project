@@ -44,7 +44,7 @@ function App() {
       {/* social media links */}
       <div className="social-media-links">
         <img src={slackIcon} alt="slack icon" />
-        <img src={githubIcon} alt="github icon" />
+        <a href="https://github.com/Jay035"><img src={githubIcon} alt="github icon" /></a>
       </div>
       <Footer />
     </div>
