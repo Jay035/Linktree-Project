@@ -42,6 +42,13 @@ export const Data = async () => {
             // aos style
             aosStyle: "fade-right"
         },
+        {
+            id: "contact",
+            title: "Contact Me",
+            link: "/contact",
+            // aos style
+            aosStyle: "fade-right"
+        },
         
     ]
 }

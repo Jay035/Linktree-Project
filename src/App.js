@@ -1,12 +1,9 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
-import 'aos/dist/aos.css';
-import Button from "./components/Button";
-import ProfilePic from "./profile-pics.png";
-import shareBtn from "./assets/_Avatar-share-button.png";
-import shareBtnDesktop from "./assets/_Avatar share button-desktop.svg";
-import slackIcon from "./assets/slack.svg";
-import githubIcon from "./assets/github-icon.svg";
+import "aos/dist/aos.css";
+import Main from "./pages/Main";
+import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
 function App() {
@@ -14,38 +11,15 @@ function App() {
   AOS.init();
 
   return (
-    <div className="App">
-      <img
-        data-aos="fade-in" 
-        // data-aos-duration="3000"
-        className="cursor-pointer share-btn"
-        id="share-btn-mobile"
-        src={shareBtn}
-        alt="share button"
-      />
-      <img
-        data-aos="fade-in"
-        className="cursor-pointer share-btn"
-        id="share-btn-desktop"
-        src={shareBtnDesktop}
-        alt="share button"
-      />
-      <div data-aos="fade-up" data-aos-delay="50" className="profile">
-        <img id="profile__img" src={ProfilePic} alt="profile pic" />
-        <p id="slack" className="hidden">
-          CodexJay
-        </p>
-        <p id="name">CodexJay</p>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Main />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
       </div>
-      {/* LINKS */}
-      <Button />
-      {/* social media links */}
-      <div className="social-media-links">
-        <img src={slackIcon} alt="slack icon" />
-        <a href="https://github.com/Jay035"><img src={githubIcon} alt="github icon" /></a>
-      </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 
