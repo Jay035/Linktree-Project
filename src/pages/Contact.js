@@ -1,11 +1,11 @@
 export default function Contact() {
   return (
-    <form>
-      <h1>Contact Me</h1>
-      <p>Hi there, contact me to ask me about anything you have in mind.</p>
+    <form data-aos="fade-in">
+      <h1 data-aos="fade-up">Contact Me</h1>
+      <p data-aos="fade-up">Hi there, contact me to ask me about anything you have in mind.</p>
 
       <section>
-        <div className="name">
+        <div data-aos="fade-up" className="name">
           <div className=" form-control">
             <label htmlFor="first_name">First name</label>
             <input
@@ -28,11 +28,17 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className=" form-control">
+        <div data-aos="fade-up" className=" form-control">
           <label htmlFor="email">Email</label>
-          <input type="text" name="" id="email" />
+          <input
+            type="text"
+            name=""
+            id="email"
+            placeholder="yourname@email.com"
+          />
         </div>
-        <div className="form-control">
+
+        <div data-aos="fade-up" className="form-control">
           <label htmlFor="message">Message</label>
           <textarea
             name="message"
@@ -44,7 +50,7 @@ export default function Contact() {
           ></textarea>
         </div>
 
-        <div className="agreement form-control">
+        <div data-aos="fade-up" className="agreement form-control">
           <input type="checkbox" name="" id="checkbox" />
           <p>
             You agree to providing your data to {`name`} who may contact you.

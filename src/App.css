@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-:root{
+:root {
   --textColor: #101828;
-  --bgColor: #EAECF0;
+  --bgColor: #eaecf0;
 }
 
 * {
@@ -11,27 +11,27 @@
   box-sizing: border-box;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.App{
+.App {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  padding: 4rem 1rem 3rem;
+  padding: 4rem 1rem 1rem;
   color: var(--textColor);
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* profile section */
-.profile{
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,21 +39,21 @@
   gap: 1.5rem;
 }
 
-.share-btn{
+.share-btn {
   position: absolute;
   top: 44px;
   right: 20px;
 }
 
-#share-btn-desktop{
+#share-btn-desktop {
   display: none;
 }
 
-.profile img{
+.profile img {
   width: 88px;
 }
 
-.profile p{
+.profile p {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -61,7 +61,7 @@
 }
 
 /* links section */
-.links{
+.links {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -70,7 +70,7 @@
   margin-top: 2rem;
 }
 
-.links a{
+.links a {
   background: var(--bgColor);
   border: 1px solid var(--bgColor);
   color: var(--textColor);
@@ -83,16 +83,15 @@
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
 }
 
-
-.links a:hover{
+.links a:hover {
   background: #eaecf041;
   border: 1px solid #000;
 }
 
-.social-media-links{
+.social-media-links {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -102,32 +101,33 @@
 
 /* ------------------------------------------------------- */
 /* CONTACT page */
-form{
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: center; */
   min-height: 70vh;
   gap: 1.25rem;
   width: 100%;
   margin-inline: auto;
   max-width: 720px;
   font-size: 1rem;
+  line-height: 24px;
+  color: #475467;
 }
 
-form h1{
+form h1 {
   letter-spacing: -0.02em;
   line-height: 44px;
   color: var(--textColor);
 }
 
-form p{
+form p {
   font-size: 1.2rem;
   line-height: 30px;
 }
 
 form > section,
-form .name{
+form .name {
   display: inherit;
   flex-direction: column;
   gap: 1.25rem;
@@ -136,40 +136,71 @@ form .name{
 form .agreement.form-control {
   flex-direction: row;
   gap: 10px;
+  align-items: flex-start;
 }
 
-form .form-control{
+form input[type="checkbox"] {
+  margin-top: 7px;
+}
+
+form .form-control {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 6px;
 }
 
-form label{
+form label {
   font-size: 14px;
+  color: #344054;
 }
 
-form input{
+form input,
+form textarea {
   padding: 10px 14px;
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
 }
 
-footer{
+form input,
+:placeholder-shown {
+  color: #667085;
+}
+
+.agreement p {
+  font-size: 1rem;
+}
+
+form button {
+  padding: 12px 20px;
+  background: #1570ef;
+  border: 1px solid #1570ef;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  color: #fff;
+}
+
+footer {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 600px;
-  margin-inline: auto;
+  max-width: 700px;
+  margin: 0 auto ;
   color: #667085;
   border-top: 1px solid var(--bgColor);
-  padding-block: 2rem;
+  padding-block: 3rem;
 }
 
-footer .zuri-logo{
+footer .zuri-logo {
   width: 9rem;
 }
 
-footer .I4G-Logo{
+footer .I4G-Logo {
   width: 6.19rem;
 }
 
@@ -177,56 +208,66 @@ footer .I4G-Logo{
 
 /* TABLET SCREEN SIZES */
 
-@media (min-width: 768px){
-  .profile p{
+@media (min-width: 768px) {
+  .profile p {
     font-size: 20px;
   }
 
-  .share-btn{
+  .share-btn {
     right: 13rem;
   }
 
-  #share-btn-mobile{
+  #share-btn-mobile {
     display: none;
   }
 
-  #share-btn-desktop{
+  #share-btn-desktop {
     display: flex;
   }
 
-  .links a{
+  .links a {
     font-size: 18px;
   }
 
-  footer{
+  /* contact page */
+  form .name {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .zuri-logo{
+  form .name input {
+    width: 348px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .zuri-logo {
     width: 10.42rem !important;
   }
 
-  .I4G-Logo{
+  .I4G-Logo {
     width: 8.3rem !important;
   }
 }
 
 /* LAPTOP SCREEN SIZES */
 
-@media (min-width: 1000px){
+@media (min-width: 1000px) {
   .links a,
-  footer{
+  footer {
     max-width: 800px;
   }
 }
 
-@media (min-width: 1200px){
-  .links a{
+@media (min-width: 1200px) {
+  .links a {
     max-width: 1152px;
   }
 
-  footer{
+  footer {
     max-width: 1360px;
   }
 }
